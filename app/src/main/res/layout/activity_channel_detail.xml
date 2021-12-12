@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_2"
+    tools:context=".activities.ChannelDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarChannelDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/gray_1"
+            android:elevation="4dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:navigationIcon="@drawable/ic_left"
+            app:popupTheme="@style/Theme.ZBPorn.PopupOverlay"
+            app:titleTextColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <ImageView
+                android:id="@+id/channelBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/channelThumb"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_alignBottom="@id/channelBackdrop"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/channelTitle"
+                android:layout_width="150dp"
+                android:layout_height="28dp"
+                android:layout_below="@id/channelBackdrop"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@color/orange"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/channelCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/channelBackdrop"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:drawableLeft="@drawable/ic_video"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/channelDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/channelBackdrop"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/background_corner_blur"
+                android:drawableLeft="@drawable/ic_baseline_thumb_down_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/channelLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/channelBackdrop"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toLeftOf="@id/channelDislike"
+                android:background="@drawable/background_corner_blur"
+                android:drawableLeft="@drawable/ic_baseline_thumb_up_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/channeViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/channelBackdrop"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@id/channelTitle"
+                android:drawableLeft="@drawable/ic_baseline_visibility_24"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/channelDesciption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/channeViews"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/channelAllVideos"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_below="@id/channelDesciption"
+                android:layout_margin="8dp"
+                android:background="@drawable/background_corner_orange"
+                android:gravity="center"
+                android:textColor="@color/white" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/pbChannelDetail"
+                style="@style/AVLoadingIndicatorView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/channelAllVideos"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:visibility="visible"
+                app:indicatorColor="@color/white"
+                app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChannelVideos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbarThumbVertical="@color/orange"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

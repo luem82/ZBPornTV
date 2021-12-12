@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_videos"
+            android:icon="@drawable/ic_video"
+            android:title="@string/menu_videos" />
+        <item
+            android:id="@+id/nav_albums"
+            android:icon="@drawable/ic_album"
+            android:title="@string/menu_albums" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_categories"
+            android:title="@string/menu_categories" />
+        <item
+            android:id="@+id/nav_channels"
+            android:icon="@drawable/ic_channel"
+            android:title="@string/menu_channels" />
+        <item
+            android:id="@+id/nav_models"
+            android:icon="@drawable/ic_model"
+            android:title="@string/menu_models" />
+        <item
+            android:id="@+id/nav_playlists"
+            android:icon="@drawable/ic_playlist"
+            android:title="@string/menu_playlists" />
+    </group>
+
+    <item android:title="Settings"
+        android:id="@+id/nav_settings">
+        <menu>
+            <item
+                android:id="@+id/nav_lock"
+                android:icon="@drawable/ic_lock"
+                android:title="@string/menu_lock" />
+        </menu>
+    </item>
+
+</menu>

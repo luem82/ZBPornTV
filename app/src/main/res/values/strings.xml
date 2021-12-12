@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ZB TV</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">ZBPorn TV</string>
+    <string name="nav_header_subtitle">BEST FREE PORN VIDEOS</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_search">Search</string>
+
+    <string name="menu_videos">Videos</string>
+    <string name="menu_albums">Albums</string>
+    <string name="menu_categories">Categories</string>
+    <string name="menu_channels">Channels</string>
+    <string name="menu_models">Models</string>
+    <string name="menu_playlists">Playlists</string>
+    <string name="menu_lock">Set Child Lock Passcode</string>
+    <string name="toolbar_album_detail">Album Detail</string>
+    <string name="action_download_picture">Download Picture</string>
+    <string name="action_slide_show">Slide Show</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lock_children_title">Enter the passcode to lock children into the app</string>
+</resources>

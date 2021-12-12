@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_2">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/modelDetailThumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="8dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:background="@drawable/background_corner_blur"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/modelDetailThumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/modellName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/modelDislikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@drawable/ic_baseline_thumb_down_24"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/modelLikes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/modelDislikes"
+            android:drawableLeft="@drawable/ic_baseline_thumb_up_24"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/modelAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/modelDislikes"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/modelFlag"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:id="@+id/modelFlag"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/modelAbout"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/modelVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/modelAbout"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@drawable/ic_video"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/white"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/modelAlbums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/modelAbout"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/modelVideos"
+            android:drawableLeft="@drawable/ic_album"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/white"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

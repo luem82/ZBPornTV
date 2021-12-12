@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_2"
+    tools:context=".activities.PlaylistDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarPlaylistDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/gray_1"
+            android:elevation="4dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:navigationIcon="@drawable/ic_left"
+            app:popupTheme="@style/Theme.ZBPorn.PopupOverlay"
+            app:titleTextColor="@color/white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways|snap">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/playlistThumbTop"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                app:riv_corner_radius="8dp" />
+
+            <LinearLayout
+                android:id="@+id/playlistThums"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="160dp"
+                android:orientation="horizontal">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/playlistThumbLeft"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="8dp" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/playlistThumbCenter"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="8dp" />
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/playlistThumbRight"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    app:riv_corner_radius="8dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/playlistTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playlistThums"
+                android:layout_margin="8dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/playlistCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playlistThums"
+                android:layout_alignParentRight="true"
+                android:layout_margin="8dp"
+                android:drawableTint="@color/white"
+                android:drawableLeft="@drawable/ic_video"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/playlistAllVideos"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_below="@id/playlistCount"
+                android:layout_margin="8dp"
+                android:background="@drawable/background_corner_orange"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/pbPlaylistDetail"
+                style="@style/AVLoadingIndicatorView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/playlistAllVideos"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="48dp"
+                android:visibility="visible"
+                app:indicatorColor="@color/white"
+                app:indicatorName="LineSpinFadeLoaderIndicator" />
+
+        </RelativeLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPlaylistVideos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbarThumbVertical="@color/orange"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

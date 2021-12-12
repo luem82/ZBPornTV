@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_videos">
+
+    <fragment
+        android:id="@+id/nav_videos"
+        android:name="com.example.zbporn.fragments.VideosFragment"
+        android:label="@string/menu_videos"
+        tools:layout="@layout/fragment_videos" />
+
+    <fragment
+        android:id="@+id/nav_albums"
+        android:name="com.example.zbporn.fragments.AlbumsFragment"
+        android:label="@string/menu_albums"
+        tools:layout="@layout/fragment_albums" />
+
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="com.example.zbporn.fragments.CategoriesFragment"
+        android:label="@string/menu_categories"
+        tools:layout="@layout/fragment_categories" />
+
+    <fragment
+        android:id="@+id/nav_channels"
+        android:name="com.example.zbporn.fragments.ChannelsFragment"
+        android:label="@string/menu_channels"
+        tools:layout="@layout/fragment_channels" />
+
+    <fragment
+        android:id="@+id/nav_models"
+        android:name="com.example.zbporn.fragments.ModelsFragment"
+        android:label="@string/menu_models"
+        tools:layout="@layout/fragment_models" />
+
+    <fragment
+        android:id="@+id/nav_playlists"
+        android:name="com.example.zbporn.fragments.PlaylistsFragment"
+        android:label="@string/menu_playlists"
+        tools:layout="@layout/fragment_playlists" />
+
+    <fragment
+        android:id="@+id/nav_lock"
+        android:name="com.example.zbporn.fragments.LockcChildFragment"
+        android:label="@string/menu_lock"
+        tools:layout="@layout/fragment_lockc_child" />
+
+</navigation>
